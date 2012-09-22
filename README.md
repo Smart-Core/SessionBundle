@@ -37,6 +37,8 @@ framework:
  *  Конфигурирование автоподключения, например:
  
     ``` yaml
+    # app/config/config.yml
+    
     smart_core_session:
         autoconfigure: true
     ```
