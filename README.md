@@ -3,6 +3,8 @@ SmartCore SessionBundle
 
 Doctrine ORM Session Storage Handler
 
+Из особенностей, бандл хранит поле user_id, что позволяет получать список пользователей online.
+
 Installation
 ------------
 
