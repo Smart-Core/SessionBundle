@@ -1,8 +1,4 @@
-parameters:
-#    smart_core_session.example.class: SmartCore\Bundle\SessionBundle\Example
-
-services:
-    
+services:    
     smart_core_session.handler:
         class: SmartCore\Bundle\SessionBundle\Handler\Orm
         arguments: [@doctrine.orm.entity_manager, @service_container]
@@ -12,4 +8,3 @@ services:
         arguments: [@service_container]
         tags:
             - { name: kernel.event_listener, event: kernel.response, method: updateSessionUserId }
-
