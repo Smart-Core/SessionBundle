@@ -13,7 +13,7 @@ Doctrine ORM Session Storage Handler
         autoconfigure: true
     ```
     
-    В этом случае, автоматически прописывается:
+    В этом случае, автоматически применяется handler_id, кау будто прописать:
     
     ``` yaml    
     # app/config/config.yml
