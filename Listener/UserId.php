@@ -3,6 +3,7 @@
 namespace SmartCore\Bundle\SessionBundle\Listener;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
@@ -19,6 +20,7 @@ class UserId
     {
         if (HttpKernelInterface::MASTER_REQUEST === $event->getRequestType()
             and $this->container->has('security.context')
+            and $this->container->get('security.context')->getToken() instanceof TokenInterface
             and method_exists($this->container->get('security.context')->getToken()->getUser(), 'getId')
         ) {
             $user_id = $this->container->get('security.context')->getToken()->getUser()->getId();
