@@ -1,5 +1,5 @@
 {
-    "name": "smart-core//session-bungle",
+    "name": "smart-core/session-bungle",
     "keywords": ["session"],
     "type": "symfony-bundle",
     "homepage": "http://smart-core.org",
