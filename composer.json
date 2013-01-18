@@ -1,5 +1,5 @@
 {
-    "name": "smart-core/session-bungle",
+    "name": "smart-core/session-bundle",
     "description": "Doctrine ORM Session Storage Handler",
     "keywords": ["session"],
     "type": "symfony-bundle",
