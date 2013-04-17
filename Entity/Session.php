@@ -27,7 +27,7 @@ class Session
     protected $user_id;
     
     /**
-     * @ORM\Column(type="blob", nullable=false)
+     * @ORM\Column(type="text", nullable=false)
      */
     protected $data;
     
