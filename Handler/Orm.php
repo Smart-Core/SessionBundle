@@ -50,7 +50,7 @@ class Orm implements \SessionHandlerInterface
         
         if (is_object($session)) {
             $this->em->remove($session);
-            $this->em->flush();
+            $this->em->flush($session);
         }        
         
         return true;
@@ -100,7 +100,7 @@ class Orm implements \SessionHandlerInterface
             $session->setUserId($this->user_id);
             
             $this->em->persist($session);
-            $this->em->flush();
+            $this->em->flush($session);
         } else {
             $this->createNewSession($id, $data);
         }
@@ -123,7 +123,7 @@ class Orm implements \SessionHandlerInterface
         $session->setData($data);
         
         $this->em->persist($session);
-        $this->em->flush();
+        $this->em->flush($session);
         
         return true;
     }
