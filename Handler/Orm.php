@@ -46,7 +46,7 @@ class Orm implements \SessionHandlerInterface
      */
     public function destroy($id)
     {
-        $session = $this->em->find('SmartCoreSessionBundle:Session', $id);
+        $session = $this->em->find(Session::class, $id);
         
         if (is_object($session)) {
             $this->em->remove($session);
@@ -76,7 +76,7 @@ class Orm implements \SessionHandlerInterface
     public function read($id)
     {
         /** @var Session $session */
-        $session = $this->em->find('SmartCoreSessionBundle:Session', $id);
+        $session = $this->em->find(Session::class, $id);
         
         if (is_object($session)) {
             return $session->getData();
@@ -92,7 +92,7 @@ class Orm implements \SessionHandlerInterface
     public function write($id, $data)
     {
         /** @var Session $session */
-        $session = $this->em->find('SmartCoreSessionBundle:Session', $id);
+        $session = $this->em->find(Session::class, $id);
         
         if (is_object($session)) {
             $session->setData($data);
